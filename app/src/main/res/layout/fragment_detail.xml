@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_orange_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/detail_news"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/imageDetailFragmentIV"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        tools:background="@android:color/holo_orange_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/image_detail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2" />
+
+    <TextView
+        android:id="@+id/titleDetailNewsTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/news_title"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="start"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageDetailFragmentIV" />
+
+    <TextView
+        android:id="@+id/authorDetailNewsTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mark_moore"
+        android:layout_marginTop="10dp"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/titleDetailNewsTV"
+        app:layout_constraintTop_toBottomOf="@+id/titleDetailNewsTV" />
+
+    <TextView
+        android:id="@+id/dateDetailNewsTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/date"
+        android:layout_marginTop="10dp"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/titleDetailNewsTV"
+        app:layout_constraintTop_toBottomOf="@+id/titleDetailNewsTV" />
+
+    <TextView
+        android:id="@+id/contentDetailNewsTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/content"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/dateDetailNewsTV"
+        app:layout_constraintStart_toStartOf="@+id/authorDetailNewsTV"
+        app:layout_constraintTop_toBottomOf="@+id/authorDetailNewsTV" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
